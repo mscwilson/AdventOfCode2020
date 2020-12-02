@@ -1,0 +1,6 @@
+1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc
+10-40 c: cccc
+3-6 a: bbaccccccc
+1-4 a: xxxabbbbbaaa
