@@ -68,7 +68,7 @@ p "Anyone answered yes: #{question_count}"
 # For each group, count the number of questions to which everyone answered "yes". What is the sum of those counts?
 
 # Combine the answers from all the people within a group into one string each
-groups_list_reduced = groups_list.map { |group| group.reduce(&:+).chars.sort.join }
+groups_list_reduced = groups_list.map { |group| group.reduce(&:+) }
 
 consensus_counter = 0
 groups_list_reduced.each_with_index do |group, i|
