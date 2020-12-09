@@ -49,12 +49,12 @@
 
 require "set"
 
-file = File.open("input.txt")
+file = File.open("test_input.txt")
 input_data = file.readlines.map(&:chomp).map(&:to_i)
 
 
 # part 1
-preamble_length = 25
+preamble_length = 5
 
 def possible_sums(list)
   possible_sums = Set.new()
@@ -115,11 +115,14 @@ to_find = first_part_answer(preamble_length, input_data)
 input_data.each_with_index do |num, i|
   current_sum = 0
   these_values_added = []
+  p "starting loop i: #{i}"
 
   while current_sum < to_find
+    p "start of while i: #{i}"
     current_sum += input_data[i]
     these_values_added << input_data[i]
     i += 1
+    
   end
 
   if current_sum == to_find
